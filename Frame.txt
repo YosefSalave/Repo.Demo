@@ -1,0 +1,32 @@
+handling iframes:
+
+iframe:WebPage elements will be displayed in other webpage
+
+* Iframes are created by using tagname "iframe".
+
+* To handle iframeElements we need to shift selenium focus from main page to framepage
+ 	driver.switchTo().frame(argument)
+
+* Three types of arguments
+	a.int arg-------> we need to pass frame index
+
+	b.String arg----> we need to pass iframe id attribute value
+
+	c.Webelement arg---> we can identify frame by using findElement().
+
+* to handle main page elements we need to shift focus from frame to main page using following command
+     a.  driver.switchTo().parentFrame();
+     b. driver.switchTo().defaultContent();
+
+
+How to identify element belongs to frame or not:
+
+Right click on Elements
+
+Result :  In context menu "This Frame" option will be present.
+
+difference between parentFrame() and defaultContent():
+
+parentframe; used to switch from child frame to parent frame
+
+defaultContent: used to switch from child frame to main page
